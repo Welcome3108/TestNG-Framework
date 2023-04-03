@@ -1,0 +1,91 @@
+-->TesNG:-unit Test Framework
+-->TDD:-Test Driven Development
+
+-->Unit Testing:- Developer break the complete application code into smaller units and test all the units separately. 
+              This process of breaking the code into smaller units and testing is known as Unit Testing. 
+              Unit Testing can be performed in both manual and by automation.
+              
+-->Purpose of TestNG:-To design a Test Cases in a Systematic Way.
+                      Generates HTML reports
+                      Different annotation
+                      Priority/sequence to execute a different Test Cases.
+                      Dependency:if one test case dependent upon another.
+                      Grouping
+                      data provider
+
+-->TestNG:-Open source,Free
+
+-->TestNG is also called as Java Unit Testing Framework.
+
+-->In TestNG we do not write main method.
+
+-->Every annotation should associate with method.(It means one annotation should link with one method).
+ 	
+-->Annotation Starting @Before is called as a Pre-requiste or Pre-condition Annotation. 
+
+-->Annotation Starting @Test is Called as Test Case.
+
+-->Once the Test Case is completed what you want to perform is done by @After Annoatation.
+
+-->We set the priority of the Test Cases by mentiong the priority in front of @Test annotation.
+   Ex:- @Test((Priority=1)
+
+-->We can create the Groups according to method Name.
+   Ex:- @Test(Priority=1,groups="LinkTest")
+   
+-->If one Test case is depend upon another Test Cases
+   Ex:-@Test
+        public void loginTest(){
+        System.out.println("Login Test");
+        }
+        
+        @Test(dependsOnMethods="loginTest")
+        public void homeoageTest(){
+        System.out.println("Home pAge Test");
+        }
+        
+-->If we want to excute the sameTest cases we use:Invocationcount 
+
+-->If Test Case goes into infinite loop use timeOut Keywords:@Test(timeOut=3000).
+
+-->We can convert number into String by using expectedException=NumberFormatException.class
+
+-->To validate the Data we use assertation(Ex:-assert)
+
+-->To validate we use Assert.assertEquals(actual,Expected);
+
+-->If condition is true Assert.assertTrue();
+
+-->TestNG.xml:-It is XML file which take a control how you want to excute yur Test Case at a time.
+
+-->If you get TestNG Test it will run one single class.
+
+-->But if you get TestNG suite it will run multiple program.
+
+-->TestNg is also called as TestNG Template file or Runner File.
+
+-->DataDriven from Different Resource:-
+    a.Excel File
+    b.Properties file :-Env variable OR Test Data
+    c.Testing.xml:- Env variable
+    d.XML file
+    e.JASON files
+    f.DB 
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	
